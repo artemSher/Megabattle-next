@@ -1,0 +1,113 @@
+.contacts {
+  padding: 4rem;
+  position: relative;
+  z-index: 2;
+}
+
+.contacts h2 {
+  font-size: 3.5rem;
+  text-align: center;
+  font-family: var(--heading-font);
+  font-weight: 500;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+.contactsContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.map {
+  height: 400px;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.contactInfo {
+  padding: 2rem;
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contactInfo p {
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.contactInfo i {
+  font-size: 1.4rem;
+  color: var(--primary-color);
+}
+
+.contactInfo a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contactInfo a:hover {
+  color: var(--secondary-color);
+}
+
+.iconLocation::before {
+  content: '📍';
+}
+
+.iconPhone::before {
+  content: '📞';
+}
+
+.iconEmail::before {
+  content: '✉️';
+}
+
+.contactButton {
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  background: var(--primary-color);
+  color: var(--light-text);
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: var(--body-font);
+  font-weight: 500;
+}
+
+.contactButton:hover {
+  transform: translateY(-2px);
+  background: var(--accent-color);
+}
+
+@media (max-width: 992px) {
+  .contacts {
+    padding: 3rem 2rem;
+  }
+  
+  .contacts h2 {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .contactsContainer {
+    grid-template-columns: 1fr;
+  }
+  
+  .contacts h2 {
+    font-size: 2.3rem;
+  }
+  
+  .contactInfo {
+    padding: 1.5rem;
+  }
+}

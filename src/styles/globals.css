@@ -1,0 +1,91 @@
+@font-face {
+  font-family: 'Druk Text Wide Cyr';
+  src: url('/fonts/Druk Text Wide Cyr Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Druk Text Wide Cyr';
+  src: url('/fonts/Druk Text Wide Cyr Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('/fonts/Raleway-VariableFont_wght.ttf') format('truetype');
+  font-weight: 400 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('/fonts/Raleway-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 400 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root {
+  --primary-color: #000000;
+  --secondary-color: #4B6BFB;
+  --accent-color: #2541b2;
+  --text-color: #000000;
+  --light-text: #ffffff;
+  --background-dark: #1E1E1E;
+  --heading-font: 'Druk Text Wide Cyr', sans-serif;
+  --body-font: 'Raleway', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--body-font);
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: #ffffff;
+  position: relative;
+}
+
+/* Обновление типографики для заголовков */
+h1, h2, h3, h4 {
+  font-family: var(--heading-font);
+  font-weight: 500;
+}
+
+/* Обеспечиваем, чтобы секции были над векторами */
+section {
+  position: relative;
+  z-index: 2;
+}
+
+/* Базовые стили контейнера */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Основные стили кнопок */
+button, .button {
+  border: none;
+  cursor: pointer;
+  font-family: var(--body-font);
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+}

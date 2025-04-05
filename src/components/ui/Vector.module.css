@@ -1,0 +1,39 @@
+.vectorDecoration {
+  position: absolute;
+  background-image: url('/assets/Vector.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Верхний правый вектор */
+.topRight {
+  top: 29.4%;
+  right: 10%;
+  width: 1200px;
+  height: 1200px;
+  transform: rotate(50deg);
+  opacity: 1;
+}
+
+/* Средний вектор */
+.middleLeft {
+  top: 48%;
+  left: -25%;
+  width: 1700px;
+  height: 1700px;
+  transform: rotate(10deg);
+  opacity: 1;
+}
+
+/* Нижний правый вектор */
+.bottomRight {
+  top: 83%;
+  right: 80%;
+  width: 700px;
+  height: 700px;
+  transform: rotate(45deg);
+  opacity: 1;
+}

@@ -1,0 +1,71 @@
+.monthsContainer {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 2rem;
+}
+
+.monthsScroll {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding: 1rem 0;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-color) transparent;
+}
+
+.monthsScroll::-webkit-scrollbar {
+  height: 10px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.monthsScroll::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+}
+
+.monthsScroll::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.month {
+  min-width: 120px;
+  text-align: center;
+  padding: 0.8rem 1.2rem;
+  border-radius: 2rem;
+  background-color: transparent;
+  border: 2px solid var(--primary-color);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  font-size: 1.1rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.month:hover {
+  border-color: transparent;
+  transform: translateY(-2px);
+  background: var(--primary-color);
+  color: var(--light-text);
+}
+
+.month.active {
+  border-color: transparent;
+  background: var(--primary-color);
+  color: var(--light-text);
+}
+
+.month:active {
+  transform: scale(0.95);
+}
+
+@media (max-width: 768px) {
+  .month {
+    min-width: 100px;
+    padding: 0.6rem 1rem;
+  }
+}
