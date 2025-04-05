@@ -1,0 +1,78 @@
+.schedule {
+  padding: 4rem;
+  background-color: #ffffff;
+  position: relative;
+}
+
+.scheduleTitle {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-family: var(--heading-font);
+  font-weight: 500;
+}
+
+.monthsContainer {
+  width: 100%;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.eventCards {
+  padding: 2rem;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+}
+
+.noEvents {
+  width: 100%;
+  text-align: center;
+  padding: 3rem;
+  background-color: #f8f8f8;
+  border-radius: 20px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.noEvents p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+@media (max-width: 1200px) {
+  .eventCards {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .schedule {
+    padding: 3rem 1rem;
+  }
+  
+  .scheduleTitle {
+    font-size: 2rem;
+  }
+
+  .eventCards {
+    flex-direction: column;
+    padding: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .schedule {
+    padding: 4rem 0;
+  }
+  
+  .scheduleTitle {
+    font-size: 2rem;
+  }
+  
+  .eventCards {
+    grid-template-columns: 1fr;
+  }
+}

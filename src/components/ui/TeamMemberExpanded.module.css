@@ -1,0 +1,145 @@
+.memberInfoExpanded {
+  display: none;
+  width: 1200px;
+  max-width: 100%;
+  margin: 2rem auto;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all 0.5s ease;
+  gap: 2rem;
+}
+
+.memberInfoExpanded.active {
+  display: flex;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.memberExpandedImage {
+  flex: 2;
+  aspect-ratio: 1/1;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #000;
+}
+
+.memberExpandedImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.memberExpandedInfo {
+  flex: 3;
+  min-height: 100%;
+  padding: 2.5rem;
+  color: var(--light-text);
+  display: flex;
+  flex-direction: column;
+  background: #000;
+  border-radius: 20px;
+}
+
+.memberExpandedName {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  font-family: var(--font-primary);
+}
+
+.memberExpandedRole {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--light-text);
+  border-radius: 100px;
+  color: var(--light-text);
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  align-self: flex-start;
+  font-family: var(--font-secondary);
+}
+
+.memberExpandedContacts {
+  margin-bottom: 2rem;
+}
+
+.memberExpandedContacts h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.memberExpandedContacts p {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  opacity: 0.8;
+}
+
+.memberExpandedDescription {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+  flex-grow: 1;
+}
+
+.memberExpandedFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1rem;
+}
+
+.memberExpandedDate {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+.memberExpandedSmile {
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+@media (max-width: 1200px) {
+  .memberInfoExpanded {
+    padding: 0 1rem;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .memberExpandedName {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .memberInfoExpanded {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .memberExpandedImage {
+    aspect-ratio: 16/9;
+  }
+  
+  .memberExpandedInfo {
+    padding: 1.5rem;
+  }
+  
+  .memberExpandedName {
+    font-size: 2rem;
+  }
+  
+  .memberExpandedRole {
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+  }
+  
+  .memberExpandedDescription {
+    font-size: 1rem;
+  }
+}
