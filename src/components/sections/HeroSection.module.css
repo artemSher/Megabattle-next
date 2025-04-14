@@ -4,6 +4,7 @@
   color: var(--light-text);
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 0 4rem;
   overflow: hidden;
   position: relative;
@@ -39,16 +40,32 @@
   position: relative;
   z-index: 1;
   max-width: 800px;
-  text-align: left;
+  text-align: center;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.titleWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
 }
 
 .heroTitle {
-  font-size: 6rem;
+  font-size: 5rem;
   font-weight: bold;
-  margin-bottom: 2rem;
   color: var(--light-text);
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   font-family: var(--heading-font);
+  text-align: center;
+  display: inline-block;
+  margin: 0;
 }
 
 .heroContent p {

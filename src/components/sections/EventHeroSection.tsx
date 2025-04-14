@@ -15,7 +15,7 @@ interface EventHeroSectionProps {
 const EventHeroSection: React.FC<EventHeroSectionProps> = ({ title, image, date, time, location }) => {
   const [scrolled, setScrolled] = useState(false);
   const [titleWords, setTitleWords] = useState<string[]>([]);
-  const [countdown, setCountdown] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+  // Таймер удален по требованию
   const [isVisible, setIsVisible] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const heroRef = useRef<HTMLDivElement>(null);
@@ -25,26 +25,7 @@ const EventHeroSection: React.FC<EventHeroSectionProps> = ({ title, image, date,
     setTitleWords(title.split(' '));
     setIsVisible(true);
 
-    // Установка даты события (пример: через 30 дней от текущей даты)
-    const eventDate = new Date();
-    eventDate.setDate(eventDate.getDate() + 30);
-
-    // Обновление отсчета времени
-    const timer = setInterval(() => {
-      const now = new Date();
-      const difference = eventDate.getTime() - now.getTime();
-
-      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-
-      setCountdown({ days, hours, minutes, seconds });
-
-      if (difference < 0) {
-        clearInterval(timer);
-      }
-    }, 1000);
+    // Таймер удален по требованию
 
     // Обработчик прокрутки
     const handleScroll = () => {
@@ -70,7 +51,6 @@ const EventHeroSection: React.FC<EventHeroSectionProps> = ({ title, image, date,
     window.addEventListener('mousemove', handleMouseMove);
 
     return () => {
-      clearInterval(timer);
       window.removeEventListener('scroll', handleScroll);
       window.removeEventListener('mousemove', handleMouseMove);
     };
@@ -123,33 +103,9 @@ const EventHeroSection: React.FC<EventHeroSectionProps> = ({ title, image, date,
           )}
         </div>
         
-        <div className={styles.countdownContainer}>
-          <div className={styles.countdownItem}>
-            <span className={styles.countdownNumber}>{countdown.days}</span>
-            <span className={styles.countdownLabel}>дней</span>
-          </div>
-          <div className={styles.countdownItem}>
-            <span className={styles.countdownNumber}>{countdown.hours}</span>
-            <span className={styles.countdownLabel}>часов</span>
-          </div>
-          <div className={styles.countdownItem}>
-            <span className={styles.countdownNumber}>{countdown.minutes}</span>
-            <span className={styles.countdownLabel}>минут</span>
-          </div>
-          <div className={styles.countdownItem}>
-            <span className={styles.countdownNumber}>{countdown.seconds}</span>
-            <span className={styles.countdownLabel}>секунд</span>
-          </div>
-        </div>
+        {/* Таймер удален по требованию */}
         
-        <div className={styles.heroButtons}>
-          <Link href="#registration" className={styles.primaryButton}>
-            Зарегистрироваться
-          </Link>
-          <Link href="#schedule" className={styles.secondaryButton}>
-            Программа
-          </Link>
-        </div>
+        {/* Кнопки удалены по требованию */}
         
 
       </div>

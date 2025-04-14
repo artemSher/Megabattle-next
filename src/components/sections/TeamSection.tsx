@@ -7,80 +7,80 @@ import TeamMemberExpanded from '@/components/ui/TeamMemberExpanded';
 const organizers = [
   {
     id: 1,
-    name: 'Имя Фамилия',
-    role: 'Деятельность',
-    image: '/assets/member1.jpg',
-    fullImage: '/assets/member1-full.jpg',
-    description: 'че то еще\nкто это зачем это что это',
+    name: 'Данила Свиненков',
+    role: 'Главный организатор',
+    image: '/assets/organizers/main/Danila.jpg',
+    fullImage: '/assets/organizers/main/Danila.jpg',
+    description: 'Главный организатор проекта ITMO.Megabattle',
     contacts: {
-      email: 'example@megabattle.itmo.ru',
-      telegram: '@example',
-      phone: 'Номер'
+      email: 'megabattle@itmo.ru',
+      telegram: '@danilasvin',
+      phone: '+7 (999) 999-99-99'
     }
   },
   {
     id: 2,
-    name: 'Имя Фамилия',
-    role: 'Деятельность',
-    image: '/assets/member2.jpg',
-    fullImage: '/assets/member2-full.jpg',
-    description: 'че то еще\nкто это зачем это что это',
+    name: 'Олег Аршинов',
+    role: 'Мегаорганизатор',
+    image: '/assets/organizers/main/Oleg.jpg',
+    fullImage: '/assets/organizers/main/Oleg.jpg',
+    description: 'Отвечает за техническое оснащение и проведение мероприятий',
     contacts: {
-      email: 'example@megabattle.itmo.ru',
-      telegram: '@example',
-      phone: 'Номер'
+      email: 'megabattle@itmo.ru',
+      telegram: '@arshinov',
+      phone: '+7 (999) 999-99-99'
     }
   },
   {
     id: 3,
-    name: 'Имя Фамилия',
-    role: 'Деятельность',
-    image: '/assets/member3.jpg',
-    fullImage: '/assets/member3-full.jpg',
-    description: 'че то еще\nкто это зачем это что это',
+    name: 'Саша Зажарская',
+    role: 'Мегаорганизатор',
+    image: '/assets/organizers/main/Aleksandra.jpg',
+    fullImage: '/assets/organizers/main/Aleksandra.jpg',
+    description: 'Отвечает за визуальную составляющую и креативные идеи',
     contacts: {
-      email: 'example@megabattle.itmo.ru',
-      telegram: '@example',
-      phone: 'Номер'
+      email: 'megabattle@itmo.ru',
+      telegram: '@sashazajar',
+      phone: '+7 (999) 999-99-99'
     }
   },
   {
     id: 4,
-    name: 'Имя Фамилия',
-    role: 'Деятельность',
-    image: '/assets/member4.jpg',
-    fullImage: '/assets/member4-full.jpg',
-    description: 'че то еще\nкто это зачем это что это',
+    name: 'Юлия Валеева',
+    role: 'Мегаорганизатор',
+    image: '/assets/organizers/main/Ulia.jpg',
+    fullImage: '/assets/organizers/main/Ulia.jpg',
+    description: 'Координирует проведение MegaQuiz и других мероприятий',
     contacts: {
-      email: 'example@megabattle.itmo.ru',
-      telegram: '@example',
-      phone: 'Номер'
+      email: 'megabattle@itmo.ru',
+      telegram: '@yuliavaleeva',
+      phone: '+7 (999) 999-99-99'
     }
   },
   {
     id: 5,
-    name: 'Имя Фамилия',
-    role: 'Деятельность',
-    image: '/assets/member5.jpg',
-    fullImage: '/assets/member5-full.jpg',
-    description: 'че то еще\nкто это зачем это что это',
+    name: 'Илья Лесин',
+    role: 'Мегаорганизатор',
+    image: '/assets/organizers/main/Ilia.jpg',
+    fullImage: '/assets/organizers/main/Ilia.jpg',
+    description: 'Отвечает за планирование и реализацию проектов',
     contacts: {
-      email: 'example@megabattle.itmo.ru',
-      telegram: '@example',
-      phone: 'Номер'
+      email: 'megabattle@itmo.ru',
+      telegram: '@ilyalesin',
+      phone: '+7 (999) 999-99-99'
     }
   },
   {
     id: 6,
-    name: 'Имя Фамилия',
-    role: 'Деятельность',
-    image: '/assets/member6.jpg',
-    fullImage: '/assets/member6-full.jpg',
-    description: 'че то еще\nкто это зачем это что это',
+    name: 'Шерстобитов Артем',
+    role: 'Мегаорганизатор',
+    image: '/assets/organizers/main/Artem.jpg',
+    fullImage: '/assets/organizers/main/Artem.jpg',
+    description: 'Отвечает за техническую реализацию проектов',
     contacts: {
-      email: 'example@megabattle.itmo.ru',
-      telegram: '@example',
-      phone: 'Номер'
+      email: 'megabattle@itmo.ru',
+      telegram: '@artemsher',
+      phone: '+7 (999) 999-99-99'
     }
   }
 ];
@@ -89,80 +89,80 @@ const organizers = [
 const responsible = [
   {
     id: 7,
-    name: 'Имя Фамилия',
-    role: 'Деятельность',
-    image: '/assets/member7.jpg',
-    fullImage: '/assets/member7-full.jpg',
-    description: 'че то еще\nкто это зачем это что это',
+    name: 'Александр Заяц',
+    role: 'Главный Ответственный ФТМИ',
+    image: '/assets/organizers/megaresponsible/sasha.jpg',
+    fullImage: '/assets/organizers/megaresponsible/sasha.jpg',
+    description: 'Главный ответственный за мероприятия ФТМИ',
     contacts: {
-      email: 'example@megabattle.itmo.ru',
-      telegram: '@example',
-      phone: 'Номер'
+      email: 'megabattle@itmo.ru',
+      telegram: '@megabattle',
+      phone: '+7 (999) 999-99-99'
     }
   },
   {
     id: 8,
-    name: 'Имя Фамилия',
-    role: 'Деятельность',
-    image: '/assets/member8.jpg',
-    fullImage: '/assets/member8-full.jpg',
-    description: 'че то еще\nкто это зачем это что это',
+    name: 'Козлякова Дарья',
+    role: 'Ответственный ФТМИ',
+    image: '/assets/organizers/megaresponsible/Dasha.jpg',
+    fullImage: '/assets/organizers/megaresponsible/Dasha.jpg',
+    description: 'Ответственный за проведение мероприятий ФТМИ',
     contacts: {
-      email: 'example@megabattle.itmo.ru',
-      telegram: '@example',
-      phone: 'Номер'
+      email: 'megabattle@itmo.ru',
+      telegram: '@megabattle',
+      phone: '+7 (999) 999-99-99'
     }
   },
   {
     id: 9,
-    name: 'Имя Фамилия',
-    role: 'Деятельность',
-    image: '/assets/member9.jpg',
-    fullImage: '/assets/member9-full.jpg',
-    description: 'че то еще\nкто это зачем это что это',
+    name: 'Анна Белоусова',
+    role: 'Ответственный ФТМИ',
+    image: '/assets/organizers/megaresponsible/anna.jpg',
+    fullImage: '/assets/organizers/megaresponsible/anna.jpg',
+    description: 'Ответственный за проведение мероприятий ФТМИ',
     contacts: {
-      email: 'example@megabattle.itmo.ru',
-      telegram: '@example',
-      phone: 'Номер'
+      email: 'megabattle@itmo.ru',
+      telegram: '@megabattle',
+      phone: '+7 (999) 999-99-99'
     }
   },
   {
     id: 10,
-    name: 'Имя Фамилия',
-    role: 'Деятельность',
-    image: '/assets/member10.jpg',
-    fullImage: '/assets/member10-full.jpg',
-    description: 'че то еще\nкто это зачем это что это',
+    name: 'Мария Федорова',
+    role: 'Главный ответственный КТУ',
+    image: '/assets/organizers/megaresponsible/mariaFedorova.jpg',
+    fullImage: '/assets/organizers/megaresponsible/mariaFedorova.jpg',
+    description: 'Главный ответственный за мероприятия КТУ',
     contacts: {
-      email: 'example@megabattle.itmo.ru',
-      telegram: '@example',
-      phone: 'Номер'
+      email: 'megabattle@itmo.ru',
+      telegram: '@megabattle',
+      phone: '+7 (999) 999-99-99'
     }
   },
   {
     id: 11,
-    name: 'Имя Фамилия',
-    role: 'Деятельность',
-    image: '/assets/member11.jpg',
-    fullImage: '/assets/member11-full.jpg',
-    description: 'че то еще\nкто это зачем это что это',
+    name: 'Аня Штурбина',
+    role: 'Ответственный ФТМИ',
+    image: '/assets/organizers/megaresponsible/Ana shub.jpg',
+    fullImage: '/assets/organizers/megaresponsible/Ana shub.jpg',
+    description: 'Ответственный за проведение мероприятий ФТМИ',
     contacts: {
-      email: 'example@megabattle.itmo.ru',
-      telegram: '@example',
-      phone: 'Номер'
+      email: 'megabattle@itmo.ru',
+      telegram: '@megabattle',
+      phone: '+7 (999) 999-99-99'
     }
   },
   {
     id: 12,
-    name: 'Имя Фамилия',
-    role: 'Деятельность',
-    image: '/assets/member12.jpg',
-    fullImage: '/assets/member12-full.jpg',
-    description: 'че то еще\nкто это зачем это что это',
+    name: 'Анастасия Солдатова',
+    role: 'Ответственный ФТМИ',
+    image: '/assets/organizers/megaresponsible/Anastasia soldatova.jpg',
+    fullImage: '/assets/organizers/megaresponsible/Anastasia soldatova.jpg',
+    description: 'Ответственный за проведение мероприятий ФТМИ',
     contacts: {
-      email: 'example@megabattle.itmo.ru',
-      telegram: '@example',
-      phone: 'Номер'
+      email: 'megabattle@itmo.ru',
+      telegram: '@megabattle',
+      phone: '+7 (999) 999-99-99'
     }
   }
 ];
@@ -186,7 +186,8 @@ const TeamSection: React.FC = () => {
   };
 
   return (
-    <section className={styles.team}>
+    <section id="team" className={styles.team}>
+      <h2 className={styles.teamTitle}>АКТУАЛЬНАЯ КОМАНДА</h2>
       <div className={styles.teamFilters}>
         <button 
           className={`${styles.teamFilter} ${activeFilter === 'organizers' ? styles.active : ''}`}

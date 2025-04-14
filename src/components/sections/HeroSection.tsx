@@ -11,16 +11,10 @@ const HeroSection: React.FC = () => {
         </video>
       </div>
       <div className={styles.heroContent}>
-        <h1 className={styles.heroTitle}>ITMO.MEGABATTLE</h1>
-        <p>Проект, объединяющий талант студентов в одном месте</p>
-        <div className={styles.heroButtons}>
-          <Link href="#" className={styles.heroButton}>
-            Зарегистрироваться
-          </Link>
-          <Link href="#about" className={styles.heroButton}>
-            Подробнее
-          </Link>
+        <div className={styles.titleWrapper}>
+          <h1 className={styles.heroTitle}>ITMO.MEGABATTLE</h1>
         </div>
+        <p>Проект, объединяющий талант студентов в одном месте</p>
       </div>
     </section>
   );

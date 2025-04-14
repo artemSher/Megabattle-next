@@ -11,6 +11,7 @@
   padding: 1rem 0;
   scrollbar-width: thin;
   scrollbar-color: var(--primary-color) transparent;
+  justify-content: center;
 }
 
 .monthsScroll::-webkit-scrollbar {

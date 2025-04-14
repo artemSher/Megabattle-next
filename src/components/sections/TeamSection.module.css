@@ -2,6 +2,15 @@
   padding: 4rem;
 }
 
+.teamTitle {
+  font-size: 3.5rem;
+  text-align: center;
+  font-family: var(--heading-font);
+  font-weight: 500;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
 .teamFilters {
   display: flex;
   justify-content: center;
@@ -87,6 +96,10 @@
     padding: 3rem 2rem;
   }
   
+  .teamTitle {
+    font-size: 2.8rem;
+  }
+  
   .teamMembersScroll {
     gap: 1.5rem;
   }
@@ -95,6 +108,10 @@
 @media (max-width: 768px) {
   .team {
     padding: 3rem 1rem;
+  }
+  
+  .teamTitle {
+    font-size: 2.3rem;
   }
   
   .teamFilters {

@@ -26,6 +26,7 @@
   padding: 1rem 0.5rem 2rem;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
+  justify-content: center;
 }
 
 /* Стилизация скроллбара историй */
