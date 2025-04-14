@@ -11,6 +11,7 @@ interface EventCardProps {
   description: string;
   image: string;
   isActive?: boolean;
+  organizer?: string;
 }
 
 const EventCard: React.FC<EventCardProps> = ({
@@ -20,7 +21,8 @@ const EventCard: React.FC<EventCardProps> = ({
   location,
   description,
   image,
-  isActive = false
+  isActive = false,
+  organizer
 }) => {
   return (
     <div className={`${styles.eventCard} ${isActive ? styles.active : ''}`}>
@@ -39,6 +41,7 @@ const EventCard: React.FC<EventCardProps> = ({
         <div className={styles.eventDate}>{date}</div>
         <div className={styles.eventLocation}>{location}</div>
         <div className={styles.eventDescription}>{description}</div>
+        {organizer && <div className={styles.eventOrganizer}>{organizer}</div>}
         <Link href={`/events/${id}`} passHref legacyBehavior>
           <a className={styles.eventButton}>Подробнее</a>
         </Link>

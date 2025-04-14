@@ -6,6 +6,7 @@ import StoriesSection from '@/components/sections/StoriesSection';
 import TeamSection from '@/components/sections/TeamSection';
 import ContactsSection from '@/components/sections/ContactsSection';
 import Vector from '@/components/ui/Vector';
+import Navigation from '@/components/navigation/Navigation';
 
 export default function Home() {
   return (
@@ -16,6 +17,8 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      
+      <Navigation />
       
       <main>
         {/* Декоративные векторы */}

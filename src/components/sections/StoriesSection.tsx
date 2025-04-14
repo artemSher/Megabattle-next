@@ -9,7 +9,7 @@ const stories = [
     name: 'ИМЯ ФАМИЛ',
     faculty: 'Мегафакультет: КТУ',
     description: 'Годовой проект состоит из двух раундов и включает в себя лекции по повышению надпрофессиональных качеств студентов, выезды мегафакультетов в УСОЦ «Ягодное», интеллектуальные игры, спортивные состязания и многое другое.',
-    image: '/assets/participant1.jpg',
+    image: '/assets/stories/depositphotos_29541083-stock-illustration-silhouette-of-a-man.jpg',
     date: '2 ноября 2024'
   },
   {
@@ -17,7 +17,7 @@ const stories = [
     name: 'ИМЯ ФАМИЛ',
     faculty: 'Мегафакультет: ТИНТ',
     description: 'Участие в проекте позволило мне раскрыть свой потенциал и найти единомышленников. Особенно запомнились творческие мастер-классы и командные соревнования.',
-    image: '/assets/participant2.jpg',
+    image: '/assets/stories/depositphotos_29541083-stock-illustration-silhouette-of-a-man.jpg',
     date: '15 ноября 2024'
   },
   {
@@ -25,7 +25,7 @@ const stories = [
     name: 'ИМЯ ФАМИЛ',
     faculty: 'Мегафакультет: ФТиН',
     description: 'MEGABATTLE стал для меня отличной возможностью проявить свои организаторские способности. Работа в команде и обмен опытом с другими участниками - бесценны.',
-    image: '/assets/participant3.jpg',
+    image: '/assets/stories/depositphotos_29541083-stock-illustration-silhouette-of-a-man.jpg',
     date: '5 декабря 2024'
   },
   {
@@ -33,7 +33,7 @@ const stories = [
     name: 'ИМЯ ФАМИЛ',
     faculty: 'Мегафакультет: ИКТ',
     description: 'Благодаря проекту я смог применить свои технические навыки в организации мероприятий. Особенно понравилась работа со звуковым и световым оборудованием.',
-    image: '/assets/participant4.jpg',
+    image: '/assets/stories/depositphotos_29541083-stock-illustration-silhouette-of-a-man.jpg',
     date: '18 декабря 2024'
   },
   {
@@ -41,7 +41,7 @@ const stories = [
     name: 'ИМЯ ФАМИЛ',
     faculty: 'Мегафакультет: БиТ',
     description: 'MEGABATTLE научил меня работать в условиях многозадачности и сжатых сроков. Это отличная школа личностного роста и профессионального развития.',
-    image: '/assets/participant5.jpg',
+    image: '/assets/stories/depositphotos_29541083-stock-illustration-silhouette-of-a-man.jpg',
     date: '10 января 2025'
   },
   {
@@ -49,7 +49,7 @@ const stories = [
     name: 'ИМЯ ФАМИЛ',
     faculty: 'Мегафакультет: КТУ',
     description: 'Участие в проекте помогло мне развить soft skills и найти новых друзей. Командная работа и творческая атмосфера вдохновляют на новые достижения.',
-    image: '/assets/participant6.jpg',
+    image: '/assets/stories/depositphotos_29541083-stock-illustration-silhouette-of-a-man.jpg',
     date: '25 января 2025'
   }
 ];

@@ -1,7 +1,36 @@
 .heroContainer {
   position: relative;
-  height: 60vh;
+  height: 100vh;
   overflow: hidden;
+  background-color: #000;
+  transition: all 0.5s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .heroContainer {
+    height: 80vh;
+  }
+  
+  .scrolled {
+    height: 60vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroContainer {
+    height: 70vh;
+  }
+  
+  .scrolled {
+    height: 50vh;
+  }
+}
+
+.scrolled {
+  height: 70vh;
 }
 
 .heroImage {
@@ -13,6 +42,14 @@
   background-size: cover;
   background-position: center;
   z-index: 1;
+  transition: transform 0.5s ease-out;
+  will-change: transform;
+  filter: brightness(0.8);
+}
+
+.scrolled .heroImage {
+  transform: scale(1.15) translateY(-5%);
+  filter: blur(2px);
 }
 
 .heroOverlay {
@@ -21,14 +58,20 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.8) 100%);
   z-index: 2;
+  transition: all 0.5s ease;
+  mix-blend-mode: multiply;
+}
+
+.scrolledOverlay {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.8) 100%);
 }
 
 .heroContent {
   position: relative;
   z-index: 3;
-  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -36,16 +79,467 @@
   color: white;
   text-align: center;
   padding: 0 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .heroTitle {
-  font-size: 3.5rem;
+  font-size: 5rem;
   margin-bottom: 2rem;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  font-weight: 900;
+  letter-spacing: -1px;
+  line-height: 1.1;
+}
+
+@media (max-width: 1200px) {
+  .heroTitle {
+    font-size: 4rem;
+  }
 }
 
 @media (max-width: 768px) {
   .heroTitle {
+    font-size: 3rem;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroTitle {
     font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.titleWord {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInUp 0.8s forwards;
+  background: linear-gradient(135deg, #fff 30%, rgba(255, 255, 255, 0.8) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  padding: 0 5px;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.eventMeta {
+  display: flex;
+  gap: 1.5rem;
+  margin: 1rem 0 2rem;
+  animation: fadeIn 1s forwards;
+  animation-delay: 0.3s;
+  opacity: 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .eventMeta {
+    gap: 1rem;
+    margin: 0.5rem 0 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .eventMeta {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+  }
+}
+
+.metaBadge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 0.5rem 1.2rem;
+  border-radius: 50px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 480px) {
+  .metaBadge {
+    width: 100%;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+  }
+}
+
+.metaBadge:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-3px);
+}
+
+.metaIcon {
+  color: white;
+}
+
+.countdownContainer {
+  display: flex;
+  gap: 1.5rem;
+  margin: 2rem 0 3rem;
+  animation: fadeIn 1s forwards;
+  animation-delay: 0.5s;
+  opacity: 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.countdownItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 70px;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  aspect-ratio: 1/1;
+  justify-content: center;
+}
+
+
+
+.countdownNumber {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: white;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  line-height: 1;
+}
+
+.countdownLabel {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.8;
+  margin-top: 0.5rem;
+}
+
+.heroButtons {
+  display: flex;
+  gap: 1.5rem;
+  animation: fadeIn 1s forwards;
+  animation-delay: 0.8s;
+  opacity: 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.primaryButton, .secondaryButton {
+  padding: 1.2rem 2.5rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 220px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.primaryButton {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: white;
+  box-shadow: 0 10px 30px rgba(var(--primary-color-rgb), 0.4);
+  position: relative;
+}
+
+.primaryButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: all 0.5s ease;
+  z-index: -1;
+}
+
+.primaryButton:hover::before {
+  left: 100%;
+}
+
+.secondaryButton {
+  background: transparent;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  position: relative;
+  overflow: hidden;
+}
+
+.secondaryButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateX(-100%);
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+
+.secondaryButton:hover::before {
+  transform: translateX(0);
+}
+
+.primaryButton:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 15px 40px rgba(var(--primary-color-rgb), 0.5);
+}
+
+.secondaryButton:hover {
+  transform: translateY(-5px) scale(1.03);
+  border-color: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.scrollDownIndicator {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: white;
+  font-size: 0.9rem;
+  opacity: 0;
+  animation: fadeIn 1s forwards, bounce 2s infinite;
+  animation-delay: 1.5s;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.scrollDownIndicator:hover {
+  transform: translateX(-50%) translateY(-5px);
+}
+
+.scrollIcon {
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Декоративные элементы */
+.decorCircle1, .decorCircle2 {
+  position: absolute;
+  border-radius: 50%;
+  z-index: 2;
+  opacity: 0.15;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.decorCircle1 {
+  width: 400px;
+  height: 400px;
+  top: -150px;
+  right: -150px;
+  animation: float 15s infinite alternate ease-in-out;
+}
+
+.decorCircle2 {
+  width: 300px;
+  height: 300px;
+  bottom: -100px;
+  left: -100px;
+  animation: float 12s infinite alternate-reverse ease-in-out;
+}
+
+.glowingOrb {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(var(--primary-color-rgb), 0.3) 0%, rgba(var(--primary-color-rgb), 0) 70%);
+  filter: blur(20px);
+  z-index: 2;
+  opacity: 0.6;
+  mix-blend-mode: screen;
+  animation: pulse 4s infinite alternate ease-in-out;
+  transition: all 0.3s ease;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+}
+
+.decorGrid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  z-index: 1;
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+.decorLine1, .decorLine2 {
+  position: absolute;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+  z-index: 2;
+  opacity: 0.1;
+}
+
+.decorLine1 {
+  width: 70%;
+  top: 30%;
+  left: 15%;
+  animation: pulse 8s infinite alternate ease-in-out;
+}
+
+.decorLine2 {
+  width: 50%;
+  bottom: 25%;
+  right: 25%;
+  animation: pulse 6s infinite alternate-reverse ease-in-out;
+}
+
+.decorDots {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle, white 1px, transparent 1px);
+  background-size: 30px 30px;
+  z-index: 2;
+  opacity: 0.05;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(30px) rotate(10deg);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.05;
+    transform: scaleX(0.95);
+  }
+  100% {
+    opacity: 0.15;
+    transform: scaleX(1.05);
+  }
+}
+
+@media (max-width: 992px) {
+  .heroTitle {
+    font-size: 3.5rem;
+  }
+  
+  .countdownContainer {
+    gap: 1rem;
+  }
+  
+  .countdownItem {
+    min-width: 70px;
+  }
+  
+  .countdownNumber {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroContainer {
+    height: 80vh;
+  }
+  
+  .heroTitle {
+    font-size: 2.8rem;
+  }
+  
+  .countdownContainer {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .heroButtons {
+    flex-direction: column;
+  }
+  
+  .primaryButton, .secondaryButton {
+    min-width: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroTitle {
+    font-size: 2.2rem;
+  }
+  
+  .countdownNumber {
+    font-size: 2rem;
+  }
+  
+  .countdownItem {
+    min-width: 60px;
   }
 }

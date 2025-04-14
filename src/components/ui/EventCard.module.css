@@ -61,7 +61,15 @@
   font-size: 1rem;
   line-height: 1.6;
   color: var(--light-text);
+  margin-bottom: 1rem;
+}
+
+.eventOrganizer {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--light-text);
   margin-bottom: 2rem;
+  opacity: 0.9;
 }
 
 .eventButton {
